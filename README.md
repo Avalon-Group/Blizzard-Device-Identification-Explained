@@ -21,7 +21,7 @@ From testing we can also confirm the login-whitelist for each account isn't devi
 
 If you switch VPN you will have to verify yourself again though, if you log in that is. (Captcha etc.) 
 
-Some people are also claiming that Blizzard's "Your Account has been locked due to suspicious activity" screen means anything. But it doesn't, it just means your IP/MAC isnt verified/whitelisted for this account. After logging in via Battle.Net, your IP/Mac/Whatever will be verified and you will be fine logging into the account. If you combine this with Anti-Flag you will seem like a completely new device. 
+Some people are also claiming that Blizzard's "Your Account has been locked due to suspicious activity" screen means anything. But it doesn't, it just means your IP/MAC isnt verified/whitelisted for this account. After logging in via Battle.net (Website works too lol), your IP/Mac/Whatever will be verified and you will be fine logging into the account. If you combine this with Anti-Flag you will seem like a completely new device. 
 
 If you look at the right spots you can even see this Device-ID in some log files.
 
