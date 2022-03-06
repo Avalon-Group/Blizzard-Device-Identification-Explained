@@ -1,7 +1,10 @@
 # Blizzard Device Identification 
 The main purpose of this repository is to explain the internal Overwatch functions of the Blizzard-Device-Identification system.
 
-The reason we decided to create this repository was because some people (*which we wont name, you know who you are*) are claiming they know what is going on, without actually ever dumping or reversing the game. (their words lol) It is true that the majority of logic is hidden behind servers, so nobody knows for certain what is happening, but what we do know is that Blizzard's device identification system isn't some dark magic. The Device-ID is a randomly generate 64 byte UUID.
+The reason we decided to create this repository was because some people (*which we wont name, you know who you are*) are claiming they know what is going on, without actually ever dumping or reversing the game. (their words lol) It is true that the majority of logic is hidden behind servers, so nobody knows for certain what is happening, but what we do know is that Blizzard's device identification system isn't some dark magic.
+
+If you launch either Overwatch or close Battle.net, a new Device-ID (Identity) will be generated. This Device-ID is a randomly generated 64 byte UUID.  
+The Device-ID is a randomly generate 64 byte UUID.
 
 The Device-ID is saved in the Registry Path: `HKEY_CURRENT_USER\Software\Blizzard Entertainment\Battle.net\Identity`. 
 
@@ -11,7 +14,7 @@ From testing we can also confirm the login-whitelist for each account isn't devi
 
 If you switch VPN you will have to verify yourself again though, if you log in that is. (Captcha etc.) 
 
-Some people are also claiming that Blizzard's "Your Account has been locked due to suspicious activity" screen means anything. But it doesn't, it just means your IP/MAC isnt verified/whitelisted for this account. After logging in via Battle.net (You can also do this via the Battle.net website), your IP/Mac/Whatever will be verified and you will be fine logging into the account. If you combine this with Anti-Flag you will seem like a completely new device. 
+Some people are also claiming that Blizzard's "Your Account has been locked due to suspicious activity" screen means anything. But it doesn't, it just means your IP/MAC isnt verified/whitelisted for this account. After logging in via Battle.net (You can also do this via the Battle.net website), your IP/Mac/whatever will be verified and you will be fine logging into the account. If you combine this with Anti-Flag you will seem like a completely new device. 
 
 If you look at the right spots you can even see this Device-ID in some log files.
 
