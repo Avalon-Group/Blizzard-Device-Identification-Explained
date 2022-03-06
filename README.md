@@ -4,7 +4,6 @@ The main purpose of this repository is to explain the internal Overwatch functio
 The reason we decided to create this repository was because some people (*which we wont name, you know who you are*) are claiming they know what is going on, without actually ever dumping or reversing the game. (their words lol) It is true that the majority of logic is hidden behind servers, so nobody knows for certain what is happening, but what we do know is that Blizzard's device identification system isn't some dark magic.
 
 If you launch either Overwatch or close Battle.net, a new Device-ID (Identity) will be generated. This Device-ID is a randomly generated 64 byte UUID.  
-The Device-ID is a randomly generate 64 byte UUID.
 
 The Device-ID is saved in the Registry Path: `HKEY_CURRENT_USER\Software\Blizzard Entertainment\Battle.net\Identity`. 
 
