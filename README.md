@@ -21,6 +21,33 @@ There were also some rumors going around that Battle.net "catches you", which is
 
 There are some more tricks to this dillema but we won't share the secret sauce. 
 
+##
+```
+00 RGKY = Registry Key              -> SOFTWARE\Blizzard Entertainment\Battle.net\Identity\Identity
+01 CPGE = Code Page                 -> GetACP
+02 ULNG = User Lang                 -> GetUserDefaultLangID
+03 SLNG = System Lang               -> GetSystemDefaultLangID
+04 CNME = Computer Name             -> GetComputerNameW
+05 UNME = User Name                 -> GetUserNameW
+06 UTCO = UTC Offset                -> -GetTimeZoneInformation.Bias
+07 CARC = CPU Architecture          -> GetNativeSystemInfo.wProcessorArchitecture
+08 CREV = CPU Revision              -> GetNativeSystemInfo.wProcessorRevision
+09 CLVL = CPU Level                 -> GetNativeSystemInfo.wProcessorLevel
+10 PMEM = Physical Memory           -> GlobalMemoryStatusEx.ullTotalPhys >> 20
+11 PSZE = Page Size                 -> GlobalMemoryStatusEx.ullTotalPageFile >> 20
+12 OVER = OS Version                -> RtlGetVersion as "dwPlatformId.dwMajorVersion.dwMinorVersion.dwBuildNumber szCSDVersion"
+13 CVRA = CPU Version Info          -> __cpuid(1).EAX
+14 CFTC = CPU Features ECX          -> __cpuid(1).ECX
+15 CFTD = CPU Features EDX          -> __cpuid(1).EDX
+16 CEFC = CPU Extended Features ECX -> __cpuid(80000001).ECX & (AMD   ? 0x00000000 : 0xFFFFFFFE)
+17 CEFD = CPU Extended Features EDX -> __cpuid(80000001).EDX & (INTEL ? 0xFFFFF7FF : 0x00000000)
+18 CBRD = CPU Brand                 -> __cpuid(80000002, 80000003, 80000004).(EAX, EBX, ECX, EDX)
+19 CVEN = CPU Vendor                -> __cpuid(0).(EBX, ECX, EDX)
+20 ANME = Adapter Name              -> GetAdaptersInfo.AdapterName
+21 ADSC = Adapter Description       -> GetAdaptersInfo.Description
+22 MAC\ = Adapter MAC Address       -> GetAdaptersInfo.Address
+```
+
 ## Dump Screenshots
 ![infos](https://github.com/Avalon-Group/Blizzard-Device-Identification-Explained/blob/main/images/check_hash.png)
 ![infos](https://github.com/Avalon-Group/Blizzard-Device-Identification-Explained/blob/main/images/get_sys_info_hash.png)
